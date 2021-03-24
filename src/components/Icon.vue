@@ -1,0 +1,30 @@
+<template>
+  <!-- 有时也需要在内联语句处理器中访问原始的 DOM 事件。可以用特殊变量 $event 把它传入方法 -->
+  <svg @click="$emit('click', $event)" class="icon">
+    <use :xlink:href="'#' + name" />
+  </svg>
+</template>
+
+<script lang="ts">
+try {
+  const importAll = (requireContext: __WebpackModuleApi.RequireContext) =>
+    requireContext.keys().forEach(requireContext);
+  importAll(require.context("../assets/icons", true, /\.svg$/));
+} catch (e) {
+  console.log(e);
+}
+export default {
+  props: ["name"],
+  name: "Icon",
+};
+</script>
+
+<style lang="scss" scoped>
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+</style>
