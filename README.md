@@ -1,4 +1,4 @@
-# moze
+# bookkeeping
 
 ## Project setup
 ```
