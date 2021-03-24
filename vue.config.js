@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
     lintOnSave: false,  // 是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/moze-web/'
+        ? '/bookkeeping/'
         : '/',
     chainWebpack: config =>{    // 内部的 webpack 配置进行更细粒度的修改
         const dir = path.resolve(__dirname, 'src/assets/icons')     // 将路径或路径片段的序列解析为绝对路径
